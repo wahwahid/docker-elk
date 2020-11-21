@@ -6,8 +6,8 @@ def filter(event)
   id = event.get("sta_id")
   name = event.get("sta_name")
   status = event.get("sta_status")
-	lat = event.get("sta_lat")
-	lon = event.get("sta_long")
+	lat = (event.get("sta_lat")).round(5)
+	lon = (event.get("sta_long")).round(5)
   location = {
     "lat" => lat,
     "lon" => lon
