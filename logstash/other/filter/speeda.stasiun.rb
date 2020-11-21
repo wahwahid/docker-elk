@@ -8,7 +8,7 @@ def filter(event)
   status = event.get("sta_status")
 	lat = event.get("sta_lat")
 	lon = event.get("sta_long")
-  location ={
+  location = {
     "lat" => lat,
     "lon" => lon
   }
