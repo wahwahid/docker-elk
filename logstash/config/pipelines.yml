@@ -1,0 +1,6 @@
+- pipeline.id: main
+  path.config: "/usr/share/logstash/pipeline/main"
+- pipeline.id: speeda-operator
+  path.config: "/usr/share/logstash/pipeline/speeda-operator"
+- pipeline.id: speeda-stasiun
+  path.config: "/usr/share/logstash/pipeline/speeda-stasiun"
