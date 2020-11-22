@@ -1,5 +1,5 @@
 {
-  "template" : "stasiun",
+  "template": "stasiun",
   "mappings": {
     "properties": {
       "id": { "type": "long" },

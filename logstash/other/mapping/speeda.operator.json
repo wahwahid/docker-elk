@@ -1,5 +1,5 @@
 {
-  "template" : "operator",
+  "template": "operator",
   "mappings": {
     "properties": {
       "code": {
