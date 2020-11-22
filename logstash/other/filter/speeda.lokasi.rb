@@ -11,14 +11,12 @@ def filter(event)
     "lon" => lon
   }
   stamp = event.get("pos_utc_time")
-  if stamp == 0
+  unless stamp
     stamp = event.get("pos_insert")
-    l = DateTime.parse(stamp)
-  else
-    t = Time.at(stamp.to_i)
-    d = DateTime.parse(t.to_s)
-    l = d.new_offset("+07:00")
   end
+  t = Time.at(stamp.to_i)
+  d = DateTime.parse(t.to_s)
+  l = d.new_offset("+07:00")
   datetime = l.strftime("%FT%T.%L%:z")
   dayofweek = l.strftime("%u")
   hourofday = l.strftime("%H")
