@@ -1,0 +1,58 @@
+{
+  "template": "lokasi",
+  "mappings": {
+    "properties": {
+      "id": { "type": "long" },
+      "bike": {
+        "properties": {
+          "id": { "type": "long" },
+          "mode": { "type": "long" },
+          "name": {
+            "type": "text",
+            "fields": {
+              "keyword": { "type": "keyword", "ignore_above": 256 }
+            }
+          },
+          "longid": {
+            "type": "long",
+            "fields": {
+              "keyword": { "type": "keyword", "ignore_above": 256 }
+            }
+          },
+          "operator": {
+            "properties": {
+              "code": {
+                "type": "text",
+                "fields": {
+                  "keyword": { "type": "keyword", "ignore_above": 256 }
+                }
+              },
+              "id": { "type": "long" },
+              "name": {
+                "type": "text",
+                "fields": {
+                  "keyword": { "type": "keyword", "ignore_above": 256 }
+                }
+              }
+            }
+          }
+        }
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "datetime": {
+        "type": "date"
+      },
+      "dayofweek": {
+        "type": "text",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+      },
+      "hourofday": {
+        "type": "text",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+      },
+      "src": { "type": "long" }
+    }
+  }
+}
