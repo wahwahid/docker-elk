@@ -19,7 +19,7 @@ services:
       - "9300:9300"
     environment:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      ELASTIC_PASSWORD: changeme
+      ELASTIC_PASSWORD:
       # Use single node discovery in order to disable production mode and avoid bootstrap checks
       # see https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
       discovery.type: single-node
@@ -54,6 +54,7 @@ services:
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ELASTIC_PASSWORD:
       MYSQL_HOST:
       MYSQL_PORT:
       MYSQL_DATABASE:
@@ -77,6 +78,8 @@ services:
         read_only: true
     ports:
       - "5601:5601"
+    environment:
+      ELASTIC_PASSWORD:
     networks:
       - elk
     depends_on:
