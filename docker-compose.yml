@@ -54,6 +54,12 @@ services:
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      MYSQL_HOST:
+      MYSQL_PORT:
+      MYSQL_DATABASE:
+      MYSQL_TIMEZONE:
+      MYSQL_USER:
+      MYSQL_PASSWORD:
     networks:
       - elk
     depends_on:
