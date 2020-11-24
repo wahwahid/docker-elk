@@ -45,12 +45,10 @@
         "type": "date"
       },
       "dayofweek": {
-        "type": "text",
-        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+        "type": "long"
       },
       "hourofday": {
-        "type": "text",
-        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+        "type": "long"
       },
       "src": { "type": "long" }
     }
