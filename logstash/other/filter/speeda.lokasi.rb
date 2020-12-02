@@ -21,14 +21,7 @@ def filter(event)
   dayofweek = l.strftime("%u")
   hourofday = l.strftime("%H")
   src = event.get("pos_src")
-  operator_id = event.get("loc_id")
-  operator_code = event.get("loc_code")
-  operator_name = event.get("loc_name")
-  operator = {
-    "id" => operator_id,
-    "code" => operator_code,
-    "name" => operator_name
-  }
+  trx = event.get("pos_trx")
   bike_id = event.get("bike_id")
   bike_longid = event.get("bike_longid")
   bike_name = event.get("bike_name")
@@ -37,17 +30,26 @@ def filter(event)
     "id" => bike_id,
     "longid" => bike_longid,
     "name" => bike_name,
-    "mode" => bike_mode,
-    "operator" => operator
+    "mode" => bike_mode
   }
- 
+  operator_id = event.get("loc_id")
+  operator_code = event.get("loc_code")
+  operator_name = event.get("loc_name")
+  operator = {
+    "id" => operator_id,
+    "code" => operator_code,
+    "name" => operator_name
+  }
+
   event.set("id", id)
   event.set("location", location)
   event.set("datetime", datetime)
   event.set("dayofweek", dayofweek)
   event.set("hourofday", hourofday)
   event.set("src", src)
+  event.set("trx", trx)
   event.set("bike", bike)
+  event.set("operator", operator)
   
   event.remove("pos_id")
 	event.remove("pos_bike")

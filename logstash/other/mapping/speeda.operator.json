@@ -2,17 +2,21 @@
   "template": "operator",
   "mappings": {
     "properties": {
-      "code": {
-        "type": "text",
-        "fields": {
-          "keyword": { "type": "keyword", "ignore_above": 256 }
-        }
-      },
-      "id": { "type": "long" },
-      "name": {
-        "type": "text",
-        "fields": {
-          "keyword": { "type": "keyword", "ignore_above": 256 }
+      "operator": {
+        "properties": {
+          "code": {
+            "type": "text",
+            "fields": {
+              "keyword": { "type": "keyword", "ignore_above": 256 }
+            }
+          },
+          "id": { "type": "long" },
+          "name": {
+            "type": "text",
+            "fields": {
+              "keyword": { "type": "keyword", "ignore_above": 256 }
+            }
+          }
         }
       }
     }

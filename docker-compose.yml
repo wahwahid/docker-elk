@@ -48,6 +48,9 @@ services:
         source: ./logstash/other
         target: /usr/share/logstash/other
         read_only: true
+      - type: bind
+        source: $LOGSTASH_LASTRUN
+        target: /usr/share/logstash/lastrun
     ports:
       - "5000:5000/tcp"
       - "5000:5000/udp"

@@ -6,9 +6,12 @@ def filter(event)
 id = event.get("loc_id")
 code = event.get("loc_code")
 name = event.get("loc_name")
-event.set("id", id)
-event.set("code", code)
-event.set("name", name)
+operator = {
+  "id" => id,
+  "code" => code,
+  "name" => name
+}
+event.set("operator", operator)
 
 event.remove("loc_desc")
 event.remove("loc_icon")
