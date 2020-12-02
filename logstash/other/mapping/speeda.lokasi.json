@@ -50,9 +50,6 @@
       "hourofday": {
         "type": "long"
       },
-      "dayofweek_name": {
-        "type": "keyword"
-      },
       "src": { "type": "long" }
     }
   }
