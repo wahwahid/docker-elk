@@ -1,8 +1,7 @@
-- pipeline.id: main
-  path.config: "${HOME}/pipeline/main"
 - pipeline.id: speeda-operator
   path.config: "${HOME}/pipeline/speeda-operator"
 - pipeline.id: speeda-stasiun
   path.config: "${HOME}/pipeline/speeda-stasiun"
 - pipeline.id: speeda-lokasi
   path.config: "${HOME}/pipeline/speeda-lokasi"
+  
